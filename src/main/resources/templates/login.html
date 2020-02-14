@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>科技专项管理系统</title>
+    <link rel="shortcut icon" href="./static/images/logo.ico">
+    <link rel="stylesheet" href="./static/css/login_style.css">
+    <link rel="stylesheet" href="./static/css/yingzidesign.css">
+    <script src="./static/js/jquery-1.12.4.js"></script>
+</head>
+
+<body class="body" style="overflow: hidden; min-width: 1200px;">
+<div class="loginbody">
+    <div class="header">
+        <div class="wrapper">
+            <img class="logo" src="./static/images/login_logo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="login_main">
+            <div class="main-img">
+                <h4 class="lg_title">科技政务服务<br>资源及监测平台</h4>
+                <img src="./static/images/login_l.png" alt="">
+            </div>
+            <div class="loginbar">
+                <div class="loginbar-title"><h3>科技政务服务资源及监测平台</h3></div>
+                <div class="hr_2 height_2" style="margin: 10px 40px 20px 40px;"></div>
+                <input type="text" id="userName" placeholder="请输入用户名" autocomplete="off" />
+                <input type="password" id="passWord" placeholder="请输入密码" style="margin-bottom: 25px;">
+                <div>
+                    <input type="text" placeholder="请输入验证码" style="width: 160px; display: inline-block;">
+                    <span><img class="yesnoimg" src="./static/images/yes.png" alt=""></span>
+                    <span><img class="ve_align_m" src="./static/images/login-yzimg.png" alt="验证码"></span>
+                </div>
+                <div class="hr_2" style="margin: 0px 40px 20px 40px;"></div>
+                <a href="javascript:void(0);"><button id="login" class="login">登录</button></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p><a class="tcon" href="#">点击查看兼容浏览器及版本</a></p>
+    </div>
+</div>
+<div class="lgtcbox">
+    <div class="lgtcdw">
+        <div class="lgtc">
+            <img id="endimg" src="./static/images/end.png" alt="关闭">
+            <div class="lgtcmain">
+                <div class="lgtcmainbox">
+                    <div class="llqbox">
+                        <img src="./static/images/chrome.png" alt="chrome">
+                        <h3>CHrome</h3>
+                        <p>52.0以上版本</p>
+                    </div>
+                    <div class="llqbox">
+                        <img src="./static/images/ie.png" alt="chrome">
+                        <h3>IE</h3>
+                        <p>10.0以上版本</p>
+                    </div>
+                    <div class="llqbox">
+                        <img src="./static/images/360Logo.png" alt="chrome">
+                        <h3>360</h3>
+                        <p>9.0以上版本</p>
+                    </div>
+                    <div class="llqbox">
+                        <img src="./static/images/Firefox.png" alt="chrome">
+                        <h3>Firefox</h3>
+                        <p>50.0以上版本</p>
+                    </div>
+                </div>
+                <p class="jytishi">建议使用以上浏览器的最新版本。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+$("#login").click(function(){
+    var userName=$.trim($("#userName").val());
+    var passWord=$.trim($("#passWord").val());
+    var _this=$(this);
+
+    //此处可判断校验用户名或密码
+    _this.html("登录中...").css("background-color","#cccccc");
+
+    $.ajax({
+        contentType: 'application/json',
+        url: "/login/doLogin",
+        type: "post",
+        dataType: "json",
+        data: JSON.stringify({"userName":userName,"passWord":passWord}),
+        cache: false,
+        success: function (data) {
+            _this.html("登录").css("background-color","#139188");
+            if(data.state)
+            {
+                window.location.href="/";
+
+            }
+            else
+            {
+                alert(data.message);
+            }
+
+        },
+        error: function () {
+        }
+    });
+});
+
+</script>
+</body>
+</html>

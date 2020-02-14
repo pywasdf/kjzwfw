@@ -1,0 +1,265 @@
+/* nav css start */
+.nav-box {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    width: 230px;
+    height: 100%;
+	margin-top: 20px;
+}
+.nav2 {
+	position: absolute;
+	top: 0px;
+	left: 15px;
+    width: 200px;
+    height: 100%;
+	padding-top: 114px;
+    transition: all .3s;
+}
+#aat {
+    font-size: 14px;
+	width: 100%;
+	height: 94%;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+	background: #fff;
+	overflow: auto;
+}
+#mini{
+	color: #ffffff; 
+	padding: 14px 0 14px 20px; 
+	font-size: 14px;
+	background: #139188;
+}
+.nav2 a {
+	position: relative;
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    line-height: 50px;
+    max-height: 50px;
+    font-size: 14px;
+    color: #333333;
+    background: #ffffff;
+    transition: all .2s;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom: none;
+}
+.nav-item.nav-show {
+    border-bottom: none;
+}
+.nav-item.nav-show a{
+    color: #ffffff;
+    background: #139188;
+}
+.nav-item.nav-show ul li a{
+    color: #666666;
+    margin: 10px 0;
+    border-color: #dddddd;
+    background: #ffffff;
+}
+.nav-item a{
+    color: #333333;
+	background: #ffffff;
+}
+.nav-item.nav-show ul{
+    position: relative;
+    color: #666666;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 10px;
+	background: #ffffff;
+}
+.nav-item.nav-show ul li{
+    /*margin: 10px 0px;*/
+}
+
+.nav-item.nav-show ul li:first-child a:hover{
+	color: #ffffff;
+}
+.nav-item ul a{
+    position: relative;
+    color: #666666;
+    border: 1px solid #666666;
+    border-radius: 25px;
+	background: #ffffff;
+}
+/*.nav-item.nav-show ul a::before{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url(../images/pdf.png) no-repeat;
+}*/
+.nav-item ul a{
+    color: #666666;
+	background: #ffffff;
+}
+
+.nav-item ul {
+    display: none;
+}
+/*.nav-item>a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 4px;
+    height: 40px;
+    background: #2dd5df;
+    opacity: 0;
+    transition: all .3s;
+}*/
+
+.nav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+/* 此处修改导航图标 可自定义iconfont 替换*/
+
+/*.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e62b";
+}
+
+.icon_3::after {
+    content:"\e62b" ;
+}*/
+/*---------------------*/
+.nav-more {
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after {
+	display: inline-block;
+    content: "";
+	margin-right: 6px;
+	margin-bottom: -2px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-right: 6px solid #139188;
+}
+.nav-show .my-icon {
+    transform: rotate(-90deg);
+}
+.nav-show .my-icon.nav-more::after {
+    border: 6px solid transparent;
+	border-right: 6px solid #ffffff;
+}
+.nav-show .nav-more::after {
+    border-left: 6px solid #666;
+}
+/*******一级导航点击样式********/
+/*此处控制一级导航hover状态*/
+.nav-show, .nav-item>a:hover {
+    font-weight: bold;
+	color: #139188;
+}
+.nav-item.nav-show>a:hover{
+	font-weight: bold;
+	color: #ffffff;
+}
+/*.nav-show>a:before, .nav-item>a:hover:before {
+    opacity: 0;
+}*/
+.nav-item.nav-show ul li:hover a {
+    color: #139188;
+    border-color: #139188;
+}
+
+/*这里控制二级导航的默认样式*/
+.nav-item li a {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* nav-mini */
+.nav-mini.nav {
+    width: 60px;
+}
+.nav-mini.nav .nav-icon {/* margin-left:-2px; */
+}
+.nav-mini.nav .nav-item>a span {
+    display: none;
+}
+.nav-mini.nav .nav-more {
+    margin-right: -20px;
+}
+.nav-mini.nav .nav-item ul {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 180px;
+    z-index: 99;
+    background: #3C474C;
+    overflow: hidden;
+}
+.nav-mini.nav .nav-item:hover {
+    background: red;
+}
+.nav-mini.nav .nav-item:hover .nav-item a {
+    color: #FFF;
+}
+.nav-mini.nav .nav-item:hover a:before {
+    opacity: 1;
+}
+.nav-mini.nav .nav-item:hover ul {
+    display: block;
+}
+/******************** nav css end ****************/
+.details_wrapper{
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.details_box1 {
+    position: absolute;
+	top: 0;
+	width: 1200px;
+	z-index: 999;
+	background: #ffffff;
+}
+.details_box2{
+	padding-top: 0;
+}
+.details_main{
+	padding: 90px 0 0 215px;
+	overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

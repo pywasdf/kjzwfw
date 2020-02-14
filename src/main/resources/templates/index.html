@@ -1,0 +1,244 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate">
+    <title>科技政务服务资源及监测平台</title>
+    <link rel="shortcut icon" href="./static/images/logo.ico">
+    <link rel="stylesheet" href="./static/css/yingzidesign.css">
+    <link rel="stylesheet" href="./static/css/index_style.css">
+    <link rel="stylesheet" href="./static/css/home_style.css">
+    <link rel="stylesheet" href="./static/css/nav.css">
+    <script src="./static/js/jquery-1.12.4.js"></script>
+    <script src="./static/js/jQuery.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/nav.js"></script>
+    <style>
+        /*******************loading  css样式****************/
+        .load_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: rgba(255,255,255,0.8);
+            z-index: 999;
+        }
+
+        .load_dw {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .load {
+            position: relative;
+            top: -200px;
+            left: -100px;
+            width: 200px;
+        }
+
+        .load span {
+            display: inline-block;
+            font-size: 16px;
+            padding: 0 10px;
+            vertical-align: middle;
+        }
+
+        .load_img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body lang="zh-CN">
+<div class="load_box">
+    <div class="load_dw">
+        <div class="load">
+            <img class="load_img" src="./static/images/Load.gif"><span>加载中，请稍后...</span>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="header">
+        <div class="logo mg_18">
+            <img src="./static/images/logo.png" alt="">
+        </div>
+        <div class="nav1">
+            <ul id="nav1">
+                <li class="nav1li"><a href="#">首  页</a></li>
+                <li><a href="zwfw/dzzz/dzzz_index.html">电子证照</a></li>
+                <li><a href="zwfw/bjsj/bjsj_index.html">办件数据</a></li>
+                <li><a href="zwfw/ywzy/ywzy_index.html">业务资源</a></li>
+                <li><a href="zwfw/ptdj/ptdj_index.html">平台对接</a></li>
+                <li><a href="zwfw/xtgl/xtgl/xtgl_index.html">系统管理</a></li>
+
+
+            </ul>
+        </div>
+        <div class="gerenxinxi">
+            <span id="time">2016/12/21 上午12:00:00</span>
+            <span class="display_i_b width_1 height_16 bgcolor_white ve_align_m mgx_10"></span>
+            <div class="juese">
+                <span class="" style="font-weight: bold;">用户名：</span>
+                <span class="" th:text="${userName}"></span>
+                <span class="display_i_b width_1 height_16 bgcolor_white ve_align_m mgx_10"></span>
+                <a href="#" class="">
+                    <img class="ve_align_m" src="./static/images/scyj_2.png" alt=""><span class="color_white ve_align_m">修改密码</span></a>
+                <span class="display_i_b width_1 height_16 bgcolor_white ve_align_m mgx_10"></span>
+                <a href="/nologin" class="">
+                    <img class="ve_align_m" src="./static/images/return_2.png" alt=""><span class="color_white ve_align_m">退出</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_subject">
+
+            <div class="subject_1">
+                <div class="tztg_box">
+                    <div class="tztg_bzgf">
+                        <div class="nav3">
+                            <span class="nav3_li"><a href="#" class="tztg">通知通告</a></span>
+                            <span><a href="#" class="bzgf">标准规范</a></span>
+                            <div class="nav3hr"></div>
+                        </div>
+                        <ul class="tztg_content">
+                            <li><a href="#">国家政务服务平台政务服务数据汇聚工作周报（2020年01月06日-01月12日）</a><span>2020-01-16</span></li>
+                            <li><a href="#" title="全国一体化在线政务服务平台建设专刊：国家政务服务平台数据汇聚工作月报(2019年12月)">全国一体化在线政务服务平台建设专刊：国家政务服务平台数据汇聚工作月报(...</a><span>2020-01-14</span></li>
+                            <li><a href="#">关于开放国家人口基础信息库人像比对服务的通知</a><span>2020-01-01</span></li>
+                            <li><a href="#">关于印发国家政务服务平台政务服务事项和应用接入审核流程的通知</a><span>2019-12-28</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台政务服务“好差评”系统建设方案</a><span>2019-12-26</span></li>
+                            <li><a href="#">关于请配合做好国家政务服务平台上线试运行有关工作的通知</a><span>2019-06-10</span></li>
+                            <li><a href="#">2020年1月16日各部委接入国家平台工作进度</a><span>2020-01-16</span></li>
+                            <li class="tztg_zhli"><i>&nbsp;</i><a>更多>></a></li>
+                        </ul>
+                        <ul class="bzgf_content">
+                            <li><a href="#" title="全国一体化在线政务服务平台 电子证照 一级建造师注册证书/二级建造师注册证书/建筑工程施工许可证">全国一体化在线政务服务平台 电子证照 一级建造师注册证书/二级建造师注册证书...</a><span>2019-12-26</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台 电子证照 律师执业证/法律职业资格证书</a><span>2019-12-26</span></li>
+                            <li><a href="#" title="全国一体化在线政务服务平台 电子证照 中华人民共和国进口许可证/中华人民共和国出口许可证">全国一体化在线政务服务平台 电子证照 中华人民共和国进口许可证/中华人民共和...</a><span>2019-12-26</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台 电子证照 排污许可证</a><span>2019-12-26</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台 电子证照 社会保障卡</a><span>2019-12-26</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台 电子证照 老年人证</a><span>2019-12-26</span></li>
+                            <li><a href="#">全国一体化在线政务服务平台 电子证照 特种作业操作证</a><span>2019-12-21</span></li>
+                            <li class="tztg_zhli"><i>&nbsp;</i><a>更多>></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zyjc">
+                    <div class="nav3">
+                        <span class="nav3_li"><a href="#" class="tztg">资源监测运行图</a></span>
+                        <div class="nav3hr"></div>
+                    </div>
+                    <div class="zyjc_img">
+                        <img src="./static/images/bzgf.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="jsrk">
+                <ul class="align_r">
+                    <li class="jsrk_li"><span>电子证照</span></li>
+                    <li>
+                        <a href="#">电子证照1</a>
+                        <a href="#">电子证照2</a>
+                    </li>
+                    <li class="jsrk_li"><span>办件数据</span></li>
+                    <li>
+                        <a href="#">办件数据1</a>
+                        <a href="#">办件数据2</a>
+                    </li>
+                    <li class="jsrk_li"><span>业务资源</span></li>
+                    <li>
+                        <a href="#">业务资源1</a>
+                        <a href="#">业务资源2</a>
+                    </li>
+                    <li class="jsrk_li"><span>平台对接</span></li>
+                    <li>
+                        <a href="#">平台对接1</a>
+                        <a href="#">平台对接2</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subject_2">
+                <div class="pdr_20">
+                    <div>
+                        <div class="nav3">
+                            <span class="nav3_li"><a href="#">电子证照资源(高企)</a></span>
+                            <span><a href="#"></a></span>
+                            <div class="nav3hr"></div>
+                        </div>
+                        <div class="modular align_l">
+                            <table>
+                                <tr>
+                                    <td class="font_b bgcolor_eee" colspan="3">高企</td>
+                                </tr>
+                                <tr>
+                                    <td>总量:<span>59万</span></td>
+                                    <td>待处理:<span>16</span></td>
+                                    <td>有效数:<span>1620</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="font_b bgcolor_eee" colspan="3">外国人来华</td>
+                                </tr>
+                                <tr>
+                                    <td>总量:<span>59万</span></td>
+                                    <td>待处理:<span>16</span></td>
+                                    <td>有效数:<span>1620</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="pdr_20">
+                    <div>
+                        <div class="nav3">
+                            <span class="nav3_li"><a href="#">办件资源库</a></span>
+                            <div class="nav3hr"></div>
+                        </div>
+                        <div class="modular align_l">
+                            <ul>
+                                <li><a href="#">统一标识：</a><span>10条</span></li>
+                                <li><a href="#">受理：</a><span>11条</span></li>
+                                <li><a href="#">办理中：</a><span>12条</span></li>
+                                <li><a href="#">外办结数：</a><span>10条</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pdr_20">
+                    <div>
+                        <div class="nav3">
+                            <span class="nav3_li"><a href="#">业务资源</a></span>
+                            <div class="nav3hr"></div>
+                        </div>
+                        <div class="modular">
+                            <ol class="nav4">
+                                <li class="nav4_li"><a href="#">部门信息</a></li>
+                                <li><a href="#">业务分类</a></li>
+                                <li><a href="#">资源统计</a></li>
+                            </ol>
+                            <img src="./static/images/t1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="nav3">
+                            <span class="nav3_li"><a href="#">与国家平台对接</a></span>
+                            <div class="nav3hr"></div>
+                        </div>
+                        <div class="modular">
+                            <img src="./static/images/t3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>科技政务服务资源及监测平台@2020-01-17</p>
+    </div>
+</div>
+</body>
+</html>

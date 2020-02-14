@@ -1,0 +1,332 @@
+﻿@charset "utf-8";
+/****************************login CSS start************************************/
+/*主体 css start*/
+.loginbody{
+	position: relative;
+	min-width: 1300px;
+	height: 100%;
+	min-height: 550px;
+	background:url("../images/loginbg-img.png") no-repeat;
+	background-size: 100% 100%;
+}
+.wrapper{
+	max-width:  1200px;
+	margin: 0 auto;
+}
+/*主体 css end*/
+
+/* header css start */
+.header{
+	width: 100%;
+    height: 100px;
+	background: rgba(255,255,255,0.2);
+}
+.logo{
+	display: inline-block;
+	margin-top: 15px;
+}
+/* header css end */
+
+/* min css start */
+.main{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 1px;
+}
+.login_main{
+	position: absolute;
+	top: -300px;
+	left: -550px;
+	width: 1100px;
+	height: 500px;
+}
+.lg_title{
+	position: absolute;
+	top: 260px;
+	left: 220px;
+	text-align: center;
+	color: #139188;
+	font-weight: bold;
+	font-size: 24px;
+}
+.loginbar{
+	float: right;
+	width: 420px;
+	margin-top: 40px;
+	border-radius: 6px;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+	background: #ffffff;
+}
+.loginbar-title{
+	width: 100%;
+	text-align: center;
+	border-radius: 6px 6px 0 0;
+}
+.loginbar-title h3{
+	display: inline-block;
+	color: #139188;
+	font-size: 24px;
+	letter-spacing: 2px;
+	margin-top: 24px;
+	text-align: center;
+}
+.loginbar input{
+	width: 340px;
+	height: 46px;
+	color: #333;
+	padding-left: 10px;
+	letter-spacing: 2px;
+	margin: 0 0 25px 40px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+}
+.loginbar span{
+	display: inline-block;
+	color: #ffffff;
+}
+.loginbar .forget-password{
+	display: block;
+	text-align: right;
+	margin: 0 58px 10px 0;
+}
+.loginbar .forget-password a{
+	color: #ffffff;
+}
+.loginbar span .yesnoimg{
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin: 5px 14px 5px 6px;
+}
+
+.hr{
+	width: 340px;
+	height: 1px;
+	margin: 0 0 20px 55px;
+	background-color: rgba(255,255,255,0.5);
+}
+.loginbar .login{
+	width: 340px;
+	height: 46px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 4px;
+	margin: 0 0 30px 40px;
+	border: none;
+	border-radius: 4px;
+	background-color: #139188;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.login:hover{
+	background-color: #16a69c;
+}
+.main-img{
+	float: left;
+	position: relative;
+}
+.main-img p{
+	display: inline-block;
+	vertical-align: middle;
+}
+.main-img .img{
+	color: rgba(255,255,255,0.8);
+	font-size: 18px;
+	width: 156px;
+	height: 156px;
+	text-align: center;
+	padding-top: 68px;
+	background: url("../images/xuanzhuan2.gif") no-repeat;
+	-webkit-background-size: 156px 156px;
+    -moz-background-size: 156px 156px;
+    background-size: 156px 156px;
+    -webkit-border-radius: 128px;
+    border-radius: 128px;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    -o-transition: -o-transform 1s ease-out;
+    -ms-transition: -ms-transform 1s ease-out;
+}
+.main-img .img:hover {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+#img1{
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	background: url("../images/xuanzhuan1.gif") no-repeat;
+}
+#img2{
+	position: absolute;
+	top: 15%;
+	left: 75%;
+	background: url("../images/xuanzhuan1.gif") no-repeat;
+}
+#img3{
+	position: absolute;
+	top: 35%;
+    left: 20%;
+	background: url("../images/xuanzhuan.gif") no-repeat;
+}
+#img4{
+	position: absolute;
+	top: 40%;
+	left: 70%;
+	background: url("../images/xuanzhuan.gif") no-repeat;
+}
+.fontbox{
+	float: left;
+	top: 0;
+	left: 0;
+	color: rgba(255,255,255,0.8);
+	font-size: 18px;
+	width: 156px;
+	height: 156px;
+	text-align: center;
+	padding-top: 68px;
+}
+#fontbox1{
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+#fontbox2{
+	position: absolute;
+	top: 15%;
+	left: 75%;
+}
+#fontbox3{
+	position: absolute;
+	top: 35%;
+    left: 20%;
+}
+#fontbox4{
+	position: absolute;
+	top: 40%;
+	left: 70%;
+}
+#dian1{
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	width: 30px;
+	height: 30px;
+	background: url("../images/dian2.gif") no-repeat;
+	background-size: 100% 100%;
+}
+#dian2{
+	position: absolute;
+	top: 30%;
+	left: 70%;
+	width: 20px;
+	height: 20px;
+	background: url("../images/dian1.gif") no-repeat;
+	background-size: 100% 100%;
+}
+#dian3{
+	position: absolute;
+	top: 80%;
+	left: 27%;
+	width: 20px;
+	height: 20px;
+	background: url("../images/dian3.gif") no-repeat;
+	background-size: 100% 100%;
+}
+#dian4{
+	position: absolute;
+	top: 55%;
+	left: 80%;
+	width: 30px;
+	height: 30px;
+	background: url("../images/dian3.gif") no-repeat;
+	background-size: 100% 100%;
+}
+/* min css end */
+
+/* footer css start */
+.footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+}
+.footer a{
+	color: rgba(255,255,255,0.7);
+	margin-top: 20px;
+}
+.footer p{
+	margin-top: 20px;
+}
+/* footer css end */
+/********************弹窗 CSS start********************/
+.lgtcbox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+.lgtcdw{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
+.lgtc{
+	position: absolute;
+	top: -40%;
+	left: -40%;
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	border-radius: 6px;
+	background: #efefef;
+	min-height: 500px;
+}
+#endimg{
+	float: right;
+	margin: 20px;
+	cursor: pointer;
+}
+.lgtcmainbox{
+	margin-top: 15%;
+}
+.llqbox{
+	display: inline-block;
+	text-align: center;
+	margin: 0 30px;
+}
+.llqbox h3{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px 0 10px 0;
+}
+.llqbox p{
+	font-size: 16px;
+	font-weight: bold;
+	color: #666666;
+}
+.jytishi{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5% 0;
+}
+/****************************login CSS end************************************/
+
+
+
+
+

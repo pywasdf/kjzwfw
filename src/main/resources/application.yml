@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: dev
+debug: true
+logging:
+  level:
+    com.threefivework.mymall.dao.mapper: DEBUG
